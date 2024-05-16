@@ -296,6 +296,7 @@ mark_as_advanced(HELLO_IMGUI_IMGUI_SHARED)
 #    cmake .. -DHELLOIMGUI_USE_IMGUI_CMAKE_PACKAGE=ON
 #
 option(HELLOIMGUI_USE_IMGUI_CMAKE_PACKAGE "Use imgui from cmake package (provided by vcpkg for example) * Must be on docking branch*" OFF)
+option(HELLOIMGUI_USE_IMGUI_VENDOR "Use imgui from cmake package provided using FetchContent_Declare" OFF)
 
 #------------------------------------------------------------------------------
 # Options / Remoting
