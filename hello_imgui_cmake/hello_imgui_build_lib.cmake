@@ -238,6 +238,10 @@ function(him_add_hello_imgui)
     endif()
 
     target_include_directories(${HELLOIMGUI_TARGET} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/..>)
+    target_include_directories(${HELLOIMGUI_TARGET} PRIVATE $<BUILD_INTERFACE:${HELLOIMGUI_IMGUI_SOURCE_DIR}>)
+    target_include_directories(${HELLOIMGUI_TARGET} PRIVATE $<BUILD_INTERFACE:${HELLOIMGUI_IMGUI_SOURCE_DIR}/misc/cpp>)
+    target_include_directories(${HELLOIMGUI_TARGET} PRIVATE $<BUILD_INTERFACE:${HELLOIMGUI_IMGUI_SOURCE_DIR}/backends>)
+
 
     target_link_libraries(${HELLOIMGUI_TARGET} PUBLIC stb_hello_imgui)
     if (HELLOIMGUI_USE_IMGUI_CMAKE_PACKAGE)
